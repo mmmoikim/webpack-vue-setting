@@ -13,6 +13,15 @@ module.exports = (env, options) => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist')
     },
+    module: {
+      rules: [{
+        test: /\.js/,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'babel-loader'
+        }]
+      }]
+    },
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -27,21 +36,19 @@ module.exports = (env, options) => {
   }
 
   if (options.mode === 'development') {
-    //개발모드
     config.plugins = [
       new webpack.HotModuleReplacementPlugin(),
-      //개발모드에서 인덱스 임시로 생성
       new HtmlWebpackPlugin({
         title: 'Development',
         showErrors: true
       }),
-      new BundleAnalyzerPlugin()
+      // new BundleAnalyzerPlugin()
     ];
 
     config.devtool = 'inline-source-map';
 
     config.devServer = {
-      hot: true, //HRM
+      hot: true,
       host: 'localhost',
       contentBase: path.resolve(__dirname, 'dist'),
       stats: {
@@ -49,12 +56,10 @@ module.exports = (env, options) => {
       }
     };
   } else {
-    //프로덕트모드
     config.plugins = [
       new CleanWebpackPlugin(['dist']),
       new HtmlWebpackPlugin()
     ];
   }
-
   return config;
 }
