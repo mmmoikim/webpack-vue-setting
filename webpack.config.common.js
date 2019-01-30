@@ -28,6 +28,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
+                    //for css tag in .vue
                     'vue-style-loader',
                     'css-loader'
                 ]
@@ -42,6 +43,7 @@ module.exports = {
     },
     plugins: [
         new VueLoaderPlugin(),
+        //creation of HTML files to serve your webpack bundles
         new HtmlWebpackPlugin({
             template: 'index.html'
         })

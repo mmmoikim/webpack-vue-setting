@@ -1,19 +1,19 @@
 <template>
-  <div class="example">{{ msg }}</div>
+  <div class="red_text">{{ msg }}</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      msg: 'Hello world!'
+      msg: 'i am component'
     }
   }
 }
 </script>
 
 <style>
-.example {
+.red_text {
   color: red;
 }
 </style>
