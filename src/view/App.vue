@@ -1,29 +1,22 @@
 <template>
-  <div>
-    <app-menu />
+  <div id="app">
+    <router-link to="/">Go to HOME</router-link>
+    <router-link to="/product">Go to product</router-link>
+    <router-link to="/cart">Go to cart</router-link>
     <router-view></router-view>
+    <!-- <h1>Shopping Cart Example</h1>
+    <hr>
+    <h2>Products</h2>
+    <ProductList />
+    <hr>
+    <ShoppingCart /> -->
   </div>
-
 </template>
 
 <script>
-import AppComponent from './components/AppComponent.vue'
-import AppMenu from './components/AppMenu.vue'
-import AppDetail from './components/AppDetail.vue'
-
+import ProductList from './ProductList.vue'
+import ShoppingCart from './ShoppingCart.vue'
 export default {
-  components: {
-    'app-component': AppComponent,
-    'app-menu': AppMenu,
-    'app-detail': AppDetail
-  },
-  data() {
-    return {
-      msg: 'i am App'
-    }
-  }
+  components: { ProductList, ShoppingCart }
 }
 </script>
-
-<style>
-</style>
