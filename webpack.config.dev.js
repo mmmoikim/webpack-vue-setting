@@ -10,7 +10,7 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         //By default this is localhost
-        //host: '0.0.0.0'
+        host: 'localhost',
         //Enable webpack's Hot Module Replacement
         hot: true,
         //Tell the server where to serve content from

@@ -1,11 +1,13 @@
-# Webpack4 Bolierplate
-webpack4 configuration.
+# VUE + WEBPACK4
+https://mmmoikim.github.io/webpackFourProject/
 
 ## Quick Overview
+
 ```sh
 npm run build-dev
 npm run dev
 npm run build
+npm run deploy //git page
 ```
 
 ## plugins
