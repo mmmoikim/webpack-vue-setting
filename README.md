@@ -1,5 +1,5 @@
 # VUE + WEBPACK4
-https://mmmoikim.github.io/webpackFourProject/
+https://mmmoikim.github.io/webpack-vue-setting/
 
 ## Quick Overview
 
