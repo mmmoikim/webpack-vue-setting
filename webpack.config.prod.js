@@ -17,18 +17,7 @@ module.exports = {
                     drop_console: true,
                 }
             }
-        })],
-        splitChunks: {
-            //Cache groups can inherit and/or override any options
-            cacheGroups: {
-                //Create a vendors chunk, which includes all code from node_modules in the whole application.
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all'
-                }
-            }
-        }
+        })]
     },
     plugins: [
         //remove/clean your build folder(s) before building

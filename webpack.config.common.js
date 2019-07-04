@@ -11,6 +11,7 @@ module.exports = {
     },
     output: {
         filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
         path: BUILD_DIR
     },
     module: {

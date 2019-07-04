@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{12:function(e,t,n){"use strict";n.r(t);var i=function(){var e=this.$createElement;return(this._self._c||e)("h1",[this._v("HOME")])};i._withStripped=!0;var o={name:"home",created:function(){}},r=n(1),s=Object(r.a)(o,i,[],!1,null,null,null);s.options.__file="src/view/Home.vue";t.default=s.exports}}]);

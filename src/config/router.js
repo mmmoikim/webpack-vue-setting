@@ -1,9 +1,9 @@
 import VueRouter from 'vue-router'
 
-import Home from 'View/Home.vue'
-import ProductList from 'View/ProductList.vue'
-import ShoppingCart from 'View/ShoppingCart.vue'
-import Practice from 'View/Practice.vue'
+const Home = () => import( /* webpackChunkName: "Home" */ 'View/Home.vue');
+const ProductList = () => import( /* webpackChunkName: "ProductList" */ 'View/ProductList.vue');
+const ShoppingCart = () => import( /* webpackChunkName: "ShoppingCart" */ 'View/ShoppingCart.vue');
+const Practice = () => import( /* webpackChunkName: "Practice" */ 'View/Practice.vue');
 
 const root = "/webpackFourProject"
 const router = new VueRouter({
