@@ -8,27 +8,31 @@
       </li>
     </ul>
     <p>Total: {{ total }}</p>
-    <p><button :disabled="!products.length" @click="checkout(products)">Checkout</button></p>
+    <p>
+      <button :disabled="!products.length" @click="checkout(products)">
+        Checkout
+      </button>
+    </p>
     <p v-show="checkoutStatus">Checkout {{ checkoutStatus }}.</p>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters, mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
       checkoutStatus: state => state.cart.checkoutStatus
     }),
-    ...mapGetters('cart', {
-      products: 'cartProducts',
-      total: 'cartTotalPrice'
+    ...mapGetters("cart", {
+      products: "cartProducts",
+      total: "cartTotalPrice"
     })
   },
   methods: {
     checkout(products) {
-      this.$store.dispatch('cart/checkout', products)
+      this.$store.dispatch("cart/checkout", products);
     }
   }
-}
+};
 </script>

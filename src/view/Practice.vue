@@ -1,21 +1,15 @@
 <template>
-  <div>
-
-  </div>
+  <div></div>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters, mapState } from "vuex";
 export default {
   name: "practice",
-  data: function () {
-    return {
-    }
+  data: function() {
+    return {};
   },
-  mounted: function () {
-  },
-  methods: {
-
-  }
-}
+  mounted: function() {},
+  methods: {}
+};
 </script>
