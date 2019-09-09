@@ -20,7 +20,7 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 export default {
-  name: "shoppingCart",
+  name: "ShoppingCart",
   computed: {
     ...mapState({
       checkoutStatus: state => state.cart.checkoutStatus

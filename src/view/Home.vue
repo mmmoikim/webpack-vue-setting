@@ -4,7 +4,9 @@
 
 <script>
 export default {
-  name: "home",
-  created() {}
+  name: "Home",
+  created() {
+    console.log("home");
+  }
 };
 </script>

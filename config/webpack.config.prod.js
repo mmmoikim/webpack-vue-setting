@@ -5,6 +5,8 @@ const BUILD_DIR = path.resolve(ROOT, "dist");
 
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "production",
@@ -14,6 +16,7 @@ module.exports = {
     path: BUILD_DIR,
     publicPath: "/webpack-vue-setting/"
   },
+  context: path.resolve(ROOT, "public"), //The base directory, an absolute path
   optimization: {
     namedModules: true, //Tells webpack to use readable module identifiers for better debugging
     namedChunks: true, //webpack to use readable chunk identifiers for better debugging
@@ -45,5 +48,6 @@ module.exports = {
       verbose: true,
       dry: false
     })
+    // new BundleAnalyzerPlugin()
   ]
 };

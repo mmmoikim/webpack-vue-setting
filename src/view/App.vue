@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <router-link :to="{ name: 'home' }">HOME</router-link>
-    <router-link :to="{ name: 'product' }">PRODUCT</router-link>
-    <router-link :to="{ name: 'cart' }">CART</router-link>
-    <router-link :to="{ name: 'practice' }">practice</router-link>
+    <Menu />
     <router-view></router-view>
   </div>
 </template>
 
-<script></script>
+<script>
+import Menu from "View/Menu.vue";
+export default {
+  components: { Menu }
+};
+</script>

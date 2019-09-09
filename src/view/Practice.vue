@@ -5,7 +5,7 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 export default {
-  name: "practice",
+  name: "Practice",
   data: function() {
     return {};
   },

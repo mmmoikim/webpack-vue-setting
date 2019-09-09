@@ -13,7 +13,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  name: "productList",
+  name: "Product",
   computed: mapState({
     products: state => state.products.all
   }),
