@@ -3,7 +3,7 @@ const ROOT = path.resolve(__dirname, "../");
 const APP_DIR = path.resolve(ROOT, "src");
 const BUILD_DIR = path.resolve(ROOT, "dist");
 
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
@@ -43,11 +43,7 @@ module.exports = {
   },
   plugins: [
     //remove/clean your build folder(s) before building
-    new CleanWebpackPlugin([BUILD_DIR], {
-      root: ROOT,
-      verbose: true,
-      dry: false
-    })
+    new CleanWebpackPlugin()
     // new BundleAnalyzerPlugin()
   ]
 };

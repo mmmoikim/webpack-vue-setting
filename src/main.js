@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import App from "View/App.vue";
+import App from "$View/App.vue";
 import router from "./router";
 import store from "./store";
 

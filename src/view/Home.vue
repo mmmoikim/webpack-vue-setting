@@ -1,12 +1,13 @@
 <template>
-  <h1>HOME</h1>
+  <h1 :class="$style.text">HOME</h1>
 </template>
 
 <script>
+import style from "$Styles/home.css";
 export default {
   name: "Home",
   created() {
-    console.log("home");
+    this.$style = style;
   }
 };
 </script>

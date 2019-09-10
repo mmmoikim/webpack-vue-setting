@@ -8,10 +8,11 @@ const resolveConfig = require("./resolve.js");
 
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    app: ["./src/main.js"]
+    app: [APP_DIR + "/main.js"]
   },
   module: moduleConfig,
   resolve: resolveConfig,
@@ -20,6 +21,13 @@ module.exports = {
     //creation of HTML files to serve your webpack bundles
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "index.html")
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // all options are optional
+      filename: "[name].[hash].css",
+      chunkFilename: "[name].[hash].css",
+      ignoreOrder: false // Enable to remove warnings about conflicting order
     })
   ]
 };

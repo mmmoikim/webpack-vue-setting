@@ -1,35 +1,42 @@
 import VueRouter from "vue-router";
 
-const Home = () => import(/* webpackChunkName: "home" */ "View/Home.vue");
+const Home = () => import(/* webpackChunkName: "home" */ "$View/Home.vue");
+const Detail = () =>
+  import(/* webpackChunkName: "detail" */ "$View/Detail.vue");
 const ProductList = () =>
-  import(/* webpackChunkName: "product" */ "View/ProductList.vue");
+  import(/* webpackChunkName: "product" */ "$View/ProductList.vue");
 const ShoppingCart = () =>
-  import(/* webpackChunkName: "cart" */ "View/ShoppingCart.vue");
+  import(/* webpackChunkName: "cart" */ "$View/ShoppingCart.vue");
 const Practice = () =>
-  import(/* webpackChunkName: "practice" */ "View/Practice.vue");
+  import(/* webpackChunkName: "practice" */ "$View/Practice.vue");
 
-const root = "/webpack-vue-setting";
 const router = new VueRouter({
   mode: "history",
+  base: "/webpack-vue-setting/",
   routes: [
     {
       name: "home",
-      path: `${root}/`,
+      path: "/",
       component: Home
     },
     {
+      name: "detail",
+      path: "/detail",
+      component: Detail
+    },
+    {
       name: "product",
-      path: `${root}/product`,
+      path: "/product",
       component: ProductList
     },
     {
       name: "cart",
-      path: `${root}/cart`,
+      path: "/cart",
       component: ShoppingCart
     },
     {
       name: "practice",
-      path: `${root}/practice`,
+      path: "/practice",
       component: Practice
     }
   ]
